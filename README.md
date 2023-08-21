@@ -1,4 +1,4 @@
-Birthday Bot - README
+#Birthday Bot - README
 The Birthday Bot is a Discord bot implemented in Java using the JDA library. This bot helps manage birthdays in a Discord server by registering, verifying, and announcing them in a designated channel.
 
 Getting Started
