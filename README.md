@@ -8,8 +8,8 @@ Have Java JDK installed.
 Create a Discord bot on the Developer Portal and get its token.
 Setup:
 
-Replace token, server ID, and channel ID in the code.
-Adjust the interval for birthday checks if needed.
+Replace token, server ID, and channel ID, and File Location
+in the code. Adjust the interval for birthday checks if needed.
 Run:
 
 Compile and run the Birthday_Bot1 class to activate the bot.
