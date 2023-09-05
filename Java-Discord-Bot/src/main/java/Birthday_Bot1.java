@@ -188,7 +188,7 @@ public class Birthday_Bot1 extends ListenerAdapter{
                     //Output information to unique file destination - must create a file location
                     try
                     {
-                    properties.store(new FileOutputStream("E:\\file.txt"), null);
+                    properties.store(new FileOutputStream("REPLACE FIL_LOC"), null);
                     } catch (IOException exception)
                     {
                     // Handle the exception here, e.g., print an error message
