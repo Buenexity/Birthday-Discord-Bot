@@ -6,6 +6,7 @@ Prerequisites:
 
 Have Java JDK installed.
 Create a Discord bot on the Developer Portal and get its token.
+
 Setup:
 
 Replace token, server ID, and channel ID, and File Location
