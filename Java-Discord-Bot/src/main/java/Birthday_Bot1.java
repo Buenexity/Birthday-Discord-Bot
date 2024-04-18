@@ -192,7 +192,6 @@ public class Birthday_Bot1 extends ListenerAdapter{
                     } 
                     catch (IOException exception)
                     {
-                    // Handle the exception here, e.g., print an error message
                     System.err.println("Error writing to file: " + exception.getMessage());
                     exception.printStackTrace();
                     }
@@ -211,7 +210,7 @@ public class Birthday_Bot1 extends ListenerAdapter{
                     e.getChannel().sendMessage("Please respond with 'yes' or 'no' to verify your birthday.").queue();
                     }}}
 
-    //Check if birthday is within appropriate bounds
+    //Check if birthday is within the correct bounds
     public boolean Birthday_Check(int day, int month, int year) {
         // Check if the year is a reasonable value
         return (year >= 1900 && month >= 1 && month <= 12 && day >= 1 && day <= 31);
@@ -225,7 +224,7 @@ public class Birthday_Bot1 extends ListenerAdapter{
             return;
         }
 
-        // Create a DateTimeFormatter to format the birthday in the pattern "dd MM yyyy"
+        // Create a Date formatter to format the birthday in the pattern "dd mm yyyy"
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MM yyyy");
         SimpleDateFormat dayFormat = new SimpleDateFormat("MM-dd-yyyy");
 
@@ -238,13 +237,13 @@ public class Birthday_Bot1 extends ListenerAdapter{
         }
     }
 
-    // Create a Date object with the specified year, month, and day
+    // Create a Date object
     private Date createDate(int year, int month, int day) {
         Calendar calendar = Calendar.getInstance();
         calendar.set(year, month - 1, day); 
         return calendar.getTime();
     }
-    //Formate Date object to DD-MM-YYY
+    //Formate Date to DD-MM-YYY
     public String formatDate(Date date) {
         SimpleDateFormat formatter = new SimpleDateFormat("dd MM yyyy");
         return formatter.format(date);
