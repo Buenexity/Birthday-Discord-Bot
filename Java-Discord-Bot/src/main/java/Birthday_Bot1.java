@@ -189,7 +189,8 @@ public class Birthday_Bot1 extends ListenerAdapter{
                     try
                     {
                     properties.store(new FileOutputStream("REPLACE FIL_LOC"), null);
-                    } catch (IOException exception)
+                    } 
+                    catch (IOException exception)
                     {
                     // Handle the exception here, e.g., print an error message
                     System.err.println("Error writing to file: " + exception.getMessage());
@@ -219,8 +220,7 @@ public class Birthday_Bot1 extends ListenerAdapter{
     //Print the list of birthdays within the hashmap
     public void printAllBirthdays(MessageChannel e) {
         // Check if the Birthday_List is empty
-        if (Birthday_List.isEmpty()) {
-            // If empty, send a message indicating that no birthdays have been registered
+        if (Birthday_List.isEmpty())
             e.sendMessage("No birthdays have been registered yet.").queue();
             return;
         }
@@ -230,11 +230,10 @@ public class Birthday_Bot1 extends ListenerAdapter{
         SimpleDateFormat dayFormat = new SimpleDateFormat("MM-dd-yyyy");
 
         // Loop through the entries in the Birthday_List
-        for (Map.Entry<String, Date> entry : Birthday_List.entrySet()) {
-            // Get the Date object (birthday) associated with the username
+        for (Map.Entry<String, Date> entry : Birthday_List.entrySet()) 
+        {
             Date birthday = entry.getValue();
             String Day1 = dayFormat.format(birthday);
-            // Send a message to the message channel (e) with the username and the formatted birthday
             e.sendMessage(entry.getKey() + "'s Birthday: " + Day1).queue();
         }
     }
@@ -242,7 +241,7 @@ public class Birthday_Bot1 extends ListenerAdapter{
     // Create a Date object with the specified year, month, and day
     private Date createDate(int year, int month, int day) {
         Calendar calendar = Calendar.getInstance();
-        calendar.set(year, month - 1, day); // Month in Calendar starts from 0 (January) to 11 (December)
+        calendar.set(year, month - 1, day); 
         return calendar.getTime();
     }
     //Formate Date object to DD-MM-YYY
